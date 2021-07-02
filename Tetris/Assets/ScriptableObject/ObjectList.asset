@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tetriminos:
   - {fileID: 11400000, guid: f760e536e9fd4e740b99790935a906f2, type: 2}
-  - {fileID: 11400000, guid: d6704a69426ba654ab05740ba0e5d9b2, type: 2}
+  - {fileID: 11400000, guid: a008ecae6b1474f4b871a22201622601, type: 2}
   - {fileID: 11400000, guid: a0470181b74074d40abeed88c5438b39, type: 2}
   - {fileID: 11400000, guid: 039217df3e5eb5742aaf84d69bd78dbc, type: 2}
   - {fileID: 11400000, guid: d91d4790bd663814aab2dae2d55e03b6, type: 2}
   - {fileID: 11400000, guid: a65b7e96ab4acd74db03f28a7203e2c9, type: 2}
   - {fileID: 11400000, guid: 05a371a0a021e664983e7837c0c01496, type: 2}
-  - {fileID: 11400000, guid: a008ecae6b1474f4b871a22201622601, type: 2}
