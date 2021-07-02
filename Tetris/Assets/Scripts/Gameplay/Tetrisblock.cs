@@ -83,14 +83,7 @@ public class Tetrisblock : MonoBehaviour {
 		transform.position += Direction;
 	}
 	
-	void CheckGrid()
-	{
-		foreach (Transform children in transform)
-		{
-			int roundedY = Mathf.RoundToInt(children.transform.position.y);
-			grid.CheckGrid(roundedY);
-		}
-	}
+
 
 	public void SetPositionOnGrid()
 		{
