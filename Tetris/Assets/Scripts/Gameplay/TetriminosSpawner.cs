@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TetriminosSpawner : MonoBehaviour
 {
-    public List<SOBJTetriminos> Tetraminos = new List<SOBJTetriminos>();
+	public SOBJTetriminiosList list;
 	public Grid grid;
 	// Start is called before the first frame update
 	public List<GameObject> CurrentTetraminos = new List<GameObject>();
@@ -22,11 +22,11 @@ public class TetriminosSpawner : MonoBehaviour
 	{
 		if (NextTetriminos == null)
 		{
-			NextTetriminos = Tetraminos[Random.Range(0, Tetraminos.Count)];
+			NextTetriminos = list.GetRandomTetriminos();
 		}
 		grid.CheckTotalGrid();
 		GameObject GO = SpawnTetriminos(NextTetriminos);
-		NextTetriminos = Tetraminos[Random.Range(0, Tetraminos.Count)];
+		NextTetriminos = list.GetRandomTetriminos();
 		stateDisplayer.SetCasePicture(NextTetriminos.Picture);
 		if (CheckLooseCondition(GO))
 		{
