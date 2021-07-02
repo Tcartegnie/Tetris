@@ -21,7 +21,7 @@ public class Grid : MonoBehaviour
 	public TetriminosSpawner spawner;
 	public void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.P))
+		if(Input.GetKeyDown(KeyCode.P) || (Input.GetKeyDown(KeyCode.Escape)))
 		{
 			OnPause = !OnPause;
 			PauseMenu.SetActive(OnPause);
@@ -51,20 +51,22 @@ public class Grid : MonoBehaviour
 
 	public void CheckTotalGrid()
 	{
-		for(int i = 0; i < Height;i++)
+		for (int i = 0; i < Height; i++)
 		{
 			CheckGrid(i);
 		}
+		
 	}
 
 	public void CheckGrid(int LineID)
 	{
-		if(CheckLine(LineID))
+		if (CheckLine(LineID))
 		{
 			DeleteLine(LineID);
 			LowLine(LineID);
 			score.AddScore(ScorePerLine);
-		}	
+		}
+		
 	}
 
 
@@ -114,8 +116,6 @@ public class Grid : MonoBehaviour
 	{
 		OnPause = false;
 	}
-
-	
 
 	public void CleanGrid()
 	{
