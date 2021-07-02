@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
  public void OnContinuePressed()
 	{
 		grid.DisablePause();
-		TurnOffMenu();
+		gameObject.SetActive(false);
 	}
 
 	public void OnQuitPressed()
